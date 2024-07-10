@@ -1,0 +1,36 @@
+#app {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "aside main";
+  background-color: var(--shape-background);
+  padding: 2rem 2rem 0 2rem;
+}
+
+aside {
+  background: white url(../images/background-aside.png) no-repeat center/cover;
+  height: calc(100vh - 4rem);
+  border-radius: 1.2rem;
+  grid-area: aside;
+
+  div.title {
+    margin: 3.2rem 0 0 3.2rem;
+
+    & > div {
+      margin-top: 1.6rem;
+
+      h1 {
+        font-family: var(--leckerli-one);
+        font-weight: 400;
+        font-size: 4rem;
+        color: var(--pink);
+        margin-bottom: .4rem;
+      }
+
+      p {
+        color: var(--text-heading);
+        font: var(--body-md);
+      }
+    }
+  }
+}
