@@ -5,6 +5,7 @@
   grid-template-areas: "aside main";
   background-color: var(--shape-background);
   padding: 2rem 2rem 0 2rem;
+  gap: 2rem;
 }
 
 aside {
@@ -32,5 +33,18 @@ aside {
         font: var(--body-md);
       }
     }
+  }
+}
+
+main {
+  background-color: var(--shape-body);
+  border-radius: 1.2rem;
+  padding-block: 8rem;
+  overflow: auto;
+
+  div.form-wrapper {
+    width: 100%;
+    max-width: 56rem;
+    margin: 0 auto;
   }
 }
