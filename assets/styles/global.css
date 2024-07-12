@@ -47,10 +47,19 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   font-size: 1.6rem;
+  background-color: var(--shape-background);
 }
 
 .flex {
   display: flex;
+  align-items: flex-end;
+  gap: 1.6rem;
+  justify-content: space-between;
+}
+
+.flex-1 {
+  flex: 1;
 }
