@@ -19,48 +19,53 @@
         <h2>Crie seu convite</h2>
 
         <form action="#" method="post">
-          <fieldset class="about-the-event">
+          <fieldset class="about-event">
             <legend>Sobre o evento</legend>
 
-            <div class="input-wrapper">
-              <label for="event-name">Nome do evento</label>
-              <input type="text" id="event-name" name="event-name" placeholder="Nome do evento">
-            </div>
-
             <div class="flex">
               <div class="input-wrapper">
-                <label for="start-event">Início do evento</label>
-                <input type="datetime-local" id="start-event" name="start-event">
+                <label for="event-name">Título</label>
+                <input type="text" id="event-name" name="event-name" placeholder="Nome do evento">
               </div>
 
-              <div class="input-wrapper">
-                <label for="end-event">Nome do evento</label>
-                <input type="datetime-local" id="end-event" name="end-event">
-              </div>
-            </div>
-
-            <div class="flex">
-              <div class="options">
+              <div class="flex">
                 <div class="input-wrapper">
-                  <input type="radio" name="event-type" id="in-person" value="in-person">
-                  <label for="in-person">Presencial</label>
+                  <label for="start-event">Início do evento</label>
+                  <input type="datetime-local" id="start-event" name="start-event">
                 </div>
 
                 <div class="input-wrapper">
-                  <input type="radio" name="event-type" id="online" value="online">
-                  <label for="online">Online</label>
+                  <label for="end-event">Nome do evento</label>
+                  <input type="datetime-local" id="end-event" name="end-event">
                 </div>
               </div>
 
-              <div class="input-wrapper">
-                <label for="address">Endereço</label>
-                <input type="text" id="address" name="address" placeholder="Link ou endereço">
-              </div>
-            </div>
+              <div class="flex">
+                <div>
+                  <label>Tipo</label>
+                  <div class="options flex">
+                    <div class="input-wrapper person">
+                      <input type="radio" name="event-type" id="person" value="person" checked>
+                      <label for="person">Presencial</label>
+                    </div>
+                    
+                    <div class="input-wrapper online">
+                      <input type="radio" name="event-type" id="online" value="online">
+                      <label for="online">Online</label>
+                    </div>
+                  </div>
+                </div>
 
-            <div class="textarea-wrapper">
-              <label for="description">Descrição</label>
-              <textarea name="description" id="description" placeholder="Escreva sobre os detalhes do evento"></textarea>
+                <div class="input-wrapper flex-1">
+                  <label for="address">Endereço</label>
+                  <input type="text" id="address" name="address" placeholder="Link ou endereço">
+                </div>
+              </div>
+
+              <div class="textarea-wrapper">
+                <label for="description">Descrição</label>
+                <textarea name="description" id="description" placeholder="Escreva sobre os detalhes do evento"></textarea>
+              </div>
             </div>
           </fieldset>
         </form>
