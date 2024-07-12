@@ -1,12 +1,4 @@
 fieldset.about-event {
-  border: none;
-  
-  & legend {
-    font: var(--heading-sm);
-    color: var(--text-heading);
-    margin-bottom: 2.4rem;
-  }
-
   & > .flex {
     flex-direction: column;
     align-items: stretch;

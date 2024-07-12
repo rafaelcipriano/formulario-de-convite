@@ -6,6 +6,22 @@ div.form-wrapper {
   }
 
   form {
+
+    fieldset {
+      border: none;
+    }
+    
+    .wrapper-legend {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 2.4rem;
+    }
+
+    legend {
+      font: var(--heading-sm);
+      color: var(--text-heading);
+    }
+
     label {
       display: inline-block;
       color: var(--text-body);
