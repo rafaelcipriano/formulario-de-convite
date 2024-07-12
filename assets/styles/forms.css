@@ -1,0 +1,38 @@
+div.form-wrapper {
+  & h2 {
+    color: var(--text-heading);
+    font: var(--heading-md);
+    margin-bottom: 4rem;
+  }
+
+  form {
+    label {
+      display: inline-block;
+      color: var(--text-body);
+      font: var(--body-sm);
+      margin-bottom: 1.2rem;
+    }
+
+    input,
+    textarea {
+      padding: 1.3rem 1.6rem;
+      font: var(--body-md);
+      width: 100%;
+      border: 1px solid var(--input-stroke);
+      border-radius: .8rem;
+      background-color: var(--input-base);
+      outline: none;
+      color: var(--text-heading);
+    }
+
+    input:focus,
+    textarea:focus {
+      border: 1px solid var(--brand-light);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: var(--input-placeholder);
+    }
+  }
+}
