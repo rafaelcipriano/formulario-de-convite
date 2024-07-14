@@ -6,7 +6,10 @@ div.form-wrapper {
   }
 
   form {
-
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4.8rem;
+    
     fieldset {
       border: none;
     }
