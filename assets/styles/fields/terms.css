@@ -1,0 +1,41 @@
+.terms {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+
+  .input-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+    height: 2.8rem;
+
+    input[type="checkbox"] {
+      all: unset;
+    }
+
+    label {
+      margin-bottom: 0;
+      position: relative;
+      padding-left: 3.2rem;
+
+      a {
+        color: var(--brand-light);
+      }
+    }
+
+    label::before {
+      content: '';
+      background-image: url(../../icons/checkbox-default.svg);
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    input[type="checkbox"]:checked ~ label::before {
+      background-image: url(../../icons/checkbox-checked.svg);
+    }
+  }
+}
