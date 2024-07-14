@@ -31,7 +31,7 @@
                 <input required invalid type="text" id="event-name" name="event-name" placeholder="Nome do evento">
                 <span class="error flex">
                   <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta">
-                  Error message
+                  Campo obrigatório
                 </span>
               </div>
 
@@ -41,7 +41,7 @@
                   <input type="datetime-local" id="start-event" name="start-event">
                   <span class="error flex">
                     <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta">
-                    Error message
+                    Campo obrigatório
                   </span>
                 </div>
 
@@ -50,7 +50,7 @@
                   <input type="datetime-local" id="end-event" name="end-event">
                   <span class="error flex">
                     <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta">
-                    Error message
+                    Campo obrigatório
                   </span>
                 </div>
               </div>
@@ -76,7 +76,7 @@
                   <input required type="text" id="address" name="address" placeholder="Link ou endereço">
                   <span class="error flex">
                     <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta">
-                    Error message
+                    Campo obrigatório
                   </span>
                 </div>
               </div>
@@ -86,7 +86,7 @@
                 <textarea required name="description" id="description" placeholder="Escreva sobre os detalhes do evento"></textarea>
                 <span class="error flex">
                   <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta">
-                  Error message
+                  Campo obrigatório
                 </span>
               </div>
             </div>
@@ -317,11 +317,71 @@
                 </div>
                 <span class="error flex">
                   <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta">
-                  Error message
+                  Campo obrigatório
                 </span>
               </div>
             </div>
           </fieldset>
+
+          <fieldset class="contact">
+            <div class="wrapper-legend">
+              <img src="assets/icons/contact.svg" alt="Ícone de contato">
+              <legend>Contato</legend>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="fullname">Nome</label>
+              <input required type="text" name="fullname" id="fullname" placeholder="Nome completo">
+              <span class="error flex">
+                  <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta">
+                  Campo obrigatório
+                </span>
+            </div>
+
+            <div class="flex">
+              <div class="input-wrapper">
+                <label for="email">Email</label>
+                <input required type="email" name="email" id="email" placeholder="exemplo@email.com">
+                <span class="error flex">
+                  <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta">
+                  Campo obrigatório
+                </span>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="tel">Telefone</label>
+                <input required type="tel" name="tel" id="tel" placeholder="(99) 99999-9999">
+                <span class="error flex">
+                  <img src="assets/icons/circle-alert.svg" alt="Ícone de alerta">
+                  Campo obrigatório
+                </span>
+              </div>
+            </div>
+          </fieldset>
+
+          <hr>
+
+          <fieldset class="terms">
+            <div class="input-wrapper">
+              <input type="checkbox" name="terms" id="terms">
+              <label for="terms">Li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de Privacidade</a></label>
+            </div>
+
+            <div class="input-wrapper">
+              <input type="checkbox" name="email-update" id="email-update">
+              <label for="email-update">Aceito receber atualizações e promoções por e-mail</label>
+            </div>
+
+            <div class="input-wrapper">
+              <input type="checkbox" name="message-update" id="message-update">
+              <label for="message-update">Aceito receber atualizações e promoções por SMS</label>
+            </div>
+          </fieldset>
+
+          <button type="submit">
+            <img src="assets/icons/ticket.svg" alt="Ícone de ticket">
+            Gerar convite
+          </button>
         </form>
       </div>
     </main>
