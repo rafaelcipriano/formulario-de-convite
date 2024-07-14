@@ -1,0 +1,33 @@
+.color-box {
+  & .wrapper-colors {
+    display: flex;
+    justify-content: space-between;
+
+    .color label {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      border: .6rem solid var(--shape-button);
+    }
+
+    .color:nth-child(1) label { background: var(--brand-light);}
+    .color:nth-child(2) label { background: var(--navy);}
+    .color:nth-child(3) label { background: var(--purple);}
+    .color:nth-child(4) label { background: var(--fuschia);}
+    .color:nth-child(5) label { background: var(--pink);}
+    .color:nth-child(6) label { background: var(--danger);}
+    .color:nth-child(7) label { background: var(--orange);}
+    .color:nth-child(8) label { background: var(--yellow);}
+    .color:nth-child(9) label { background: var(--lime);}
+    .color:nth-child(10) label { background: var(--green);}
+    .color:nth-child(11) label { background: var(--cyan);}
+
+    input[type="radio"]:checked + label{
+      outline: 1px solid var(--brand-light);
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+  }
+}

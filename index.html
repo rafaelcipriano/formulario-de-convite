@@ -18,7 +18,7 @@
       <div class="form-wrapper">
         <h2>Crie seu convite</h2>
 
-        <form action="#" method="post">
+        <form action="#" method="post" enctype="multipart/form-data">
           <fieldset class="about-event">
             <div class="wrapper-legend">
               <img src="assets/icons/calendar.svg" alt="Ícone de calendário">
@@ -78,7 +78,7 @@
               <legend>Personalização</legend>
             </div>
 
-            <div class="box-colors">
+            <div class="color-box">
               <label for="color">Cor principal</label>
 
               <div class="wrapper-colors">
@@ -140,7 +140,7 @@
               </div>
             </div>
 
-            <div class="box-theme">
+            <div class="theme-box">
               <label for="theme">Tema do evento</label>
 
               <div class="wrapper-theme">
@@ -272,7 +272,7 @@
                 <label>Tipo</label>
                 <div class="flex">
                   <label class="toggle-switch">
-                    <input type="checkbox">
+                    <input type="checkbox" value="light">
                     <span class="slider"></span>
                   </label>
                   <span class="light">Claro</span>

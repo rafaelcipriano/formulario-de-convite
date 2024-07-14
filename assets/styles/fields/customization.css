@@ -1,174 +1,23 @@
-fieldset.customization {
+@import url(color-box.css);
+@import url(theme-box.css);
+@import url(toggle-switch.css);
+@import url(cover-photo.css);
+
+.customization {
   display: flex;
   flex-direction: column;
   gap: 2.8rem;
 
-  .box-colors {
-    & .wrapper-colors {
-      display: flex;
-      justify-content: space-between;
-
-      .color label {
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50%;
-        border: .6rem solid var(--shape-button);
-      }
-
-      .color:nth-child(1) label { background: var(--brand-light);}
-      .color:nth-child(2) label { background: var(--navy);}
-      .color:nth-child(3) label { background: var(--purple);}
-      .color:nth-child(4) label { background: var(--fuschia);}
-      .color:nth-child(5) label { background: var(--pink);}
-      .color:nth-child(6) label { background: var(--danger);}
-      .color:nth-child(7) label { background: var(--orange);}
-      .color:nth-child(8) label { background: var(--yellow);}
-      .color:nth-child(9) label { background: var(--lime);}
-      .color:nth-child(10) label { background: var(--green);}
-      .color:nth-child(11) label { background: var(--cyan);}
-
-      input[type="radio"]:checked + label{
-        outline: 1px solid var(--brand-light);
-      }
-
-      input[type="radio"] {
-        display: none;
-      }
-    }
-  }
-
-  .box-theme {
-
-    .wrapper-theme {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: .8rem;
-      padding: 2px;
-
-      & .theme {
-        width: 100%;
-        height: 10.3rem;
-        text-align: center;
-        border: .2rem solid var(--input-stroke);
-        border-radius: .8rem;
-        background-color: var(--input-stroke);
-        padding: .4rem;
-
-        input[type="radio"] {
-          display: none;
-        }
-
-        & label figure {
-          display: flex;
-          flex-direction: column;
-        }
-
-        & label img {
-          width: 100%;
-          object-fit: cover;
-        }
-
-        & label legend {
-          font: var(--body-sm);
-          color: var(--text-heading);
-          margin-top: .8rem;
-        }
-      }
-
-      .theme:has(input[type="radio"]:checked) {
-        border: .2rem solid var(--brand-light);
-      }
-    }
-  }
-
-  .grid {
+  & .grid {
     display: grid;
     grid-template-columns: 17.6rem auto;
     align-items: center;
 
-    & .flex {
-      align-items: center;
-      justify-content: flex-start;
-      gap: 1.2rem;
-    }
-
-    & .toggle-switch {
-      width: 6.4rem;
-      height: 3.2rem;
-      border: 1px solid var(--input-stroke);
-      border-radius: 4rem;
-      position: relative;
-      margin: 0;
-      cursor: pointer;
-
-      .slider {
-        width: 2.4rem;
-        height: 2.4rem;
-        border-radius: 50%;
-        position: absolute;
-        top: .4rem;
-        left: .4rem;
-        background-color: var(--input-stroke);
-        transition: transform .3s;
-      }
-
-      input[type="checkbox"] {
-        opacity: 0;
-      }
-
-      input[type="checkbox"]:checked + .slider {
-        transform: translateX(3rem);
-        background-color: var(--text-heading);
-      }
-    }
-
-    .dark,
-    .light {
-      color: var(--text-heading);
-      font: var(--body-sm);
-    }
-
-    & .toggle-switch ~ .light {
-      display: none;
-    }
-
-    & .toggle-switch:has(input[type="checkbox"]:checked) {
-      background-color: var(--brand-light);
-    }
-
-    & .toggle-switch:has(input[type="checkbox"]:checked) ~ .light {
-      display: block;
-    }
-
-    & .toggle-switch:has(input[type="checkbox"]:checked) ~ .dark {
-      display: none;
-    }
-
-    .dropzone {
-      position: relative;
-
-      input[type="file"] {
-        display: none;
-      }
-
-      label[for="file"] {
-        font: var(--body-sm);
-        color: var(--input-stroke);
-        display: flex;
+    .input-wrapper:nth-child(1) {
+      & .flex {
         align-items: center;
+        justify-content: flex-start;
         gap: 1.2rem;
-        margin-bottom: 0;
-
-        span.button{
-          display: flex;
-          align-items: center;
-          gap: .8rem;
-          color: var(--text-heading);
-          background-color: var(--shape-button);
-          cursor: pointer;
-          padding: 1rem 1.2rem;
-          border-radius: .8rem;
-        }
       }
     }
   }
