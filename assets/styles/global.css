@@ -63,3 +63,7 @@ body {
 .flex-1 {
   flex: 1;
 }
+
+.grid {
+  display: grid;
+}
