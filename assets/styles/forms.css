@@ -44,6 +44,11 @@ div.form-wrapper {
       color: var(--text-heading);
     }
 
+    input:invalid + .error,
+    textarea:invalid + .error {
+      display: flex;
+    }
+
     input:focus,
     textarea:focus {
       border: 1px solid var(--brand-light);

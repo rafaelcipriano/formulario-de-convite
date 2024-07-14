@@ -1,10 +1,10 @@
-& .toggle-switch {
+#toggle-switch {
   width: 6.4rem;
   height: 3.2rem;
   border: 1px solid var(--input-stroke);
   border-radius: 4rem;
   position: relative;
-  margin: 0;
+  margin-bottom: 0;
   cursor: pointer;
 
   .slider {
@@ -34,18 +34,18 @@
   font: var(--body-sm);
 }
 
-& .toggle-switch ~ .light {
+& #toggle-switch ~ .light {
   display: none;
 }
 
-& .toggle-switch:has(input[type="checkbox"]:checked) {
+& #toggle-switch:has(input[type="checkbox"]:checked) {
   background-color: var(--brand-light);
 }
 
-& .toggle-switch:has(input[type="checkbox"]:checked) ~ .light {
+& #toggle-switch:has(input[type="checkbox"]:checked) ~ .light {
   display: block;
 }
 
-& .toggle-switch:has(input[type="checkbox"]:checked) ~ .dark {
+& #toggle-switch:has(input[type="checkbox"]:checked) ~ .dark {
   display: none;
 }

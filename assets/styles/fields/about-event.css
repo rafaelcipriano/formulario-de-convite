@@ -6,6 +6,7 @@
     align-items: stretch;
 
     & .flex:nth-child(2) {
+      align-items: flex-start;
       & input[type="datetime-local"] {
         text-transform: uppercase;
         color: var(--text-heading);
@@ -24,8 +25,8 @@
       }
     }
 
-    & textarea {
-      height: 13.6rem;
+    .textarea-wrapper {
+      textarea { height: 13.6rem; }
     }
   }
 }

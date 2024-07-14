@@ -55,9 +55,8 @@ body {
 
 .flex {
   display: flex;
-  align-items: flex-end;
-  gap: 1.6rem;
   justify-content: space-between;
+  gap: 1.6rem;
 }
 
 .flex-1 {
@@ -66,4 +65,14 @@ body {
 
 .grid {
   display: grid;
+}
+
+.error {
+  margin-top: .8rem;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .8rem;
+  color: var(--danger);
+  font: var(--body-xs);
+  display: none;
 }

@@ -1,27 +1,66 @@
 .dropzone {
   position: relative;
 
-  input[type="file"] {
-    display: none;
-  }
+  & .input-wrapper {
+    input[type="file"] {
+      display: none;
+    }
+  
+    .invalid,
+    .valid {
+      font: var(--body-sm);
+    }
 
-  label[for="file"] {
-    font: var(--body-sm);
-    color: var(--input-stroke);
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    margin-bottom: 0;
+    .invalid { color: var(--input-stroke); }
 
-    span.button {
+    .valid { 
+      display: none;
+      color: var(--text-body); 
+    }
+
+    label[for="file"] {
+      
+      
       display: flex;
       align-items: center;
-      gap: .8rem;
+      gap: 1.2rem;
+      margin-bottom: 0;
+  
+      span.button {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+        background-color: var(--brand-mid);
+        color: var(--text-heading);
+        cursor: pointer;
+        padding: 1rem 1.2rem;
+        border-radius: .8rem;
+
+        svg path {
+          fill: var(--text-heading);
+        }
+      }
+    }
+
+    input[type="file"]:invalid ~ span.button {
       color: var(--text-heading);
       background-color: var(--shape-button);
-      cursor: pointer;
-      padding: 1rem 1.2rem;
-      border-radius: .8rem;
     }
+
+    input[type="file"]:invalid ~ span.button svg path {
+      fill: var(--brand-light);
+    }
+
+    input[type="file"]:valid ~ .valid {
+      display: block;
+    }
+
+    input[type="file"]:valid ~ .invalid {
+      display: none;
+    }
+  }
+
+  & .input-wrapper:has(input[type="file"]:invalid) ~ .error {
+    display: flex;
   }
 }
